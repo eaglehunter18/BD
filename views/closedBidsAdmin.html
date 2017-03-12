@@ -1,0 +1,54 @@
+<div class="container">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid ">
+      <ul class="nav navbar-nav ">
+        <li  class="text-center"><a href="#/new-bid">New Bid</a></li>
+        <li  class="text-center "><a href="#/running-bids-admin">Running Bids</a></li>
+        <li class="active text-center " ><a href="#/closed-bids-admin">Closed Bids</a></li>
+        <li class="text-center" ><a  href="#/history-admin">History</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <h2 id="h2_inline" >Closed Bids  &#8352;</h2>
+  <div id="div_inline"  class="col-xs-3">
+     <input class="form-control" type="text" value="" ng-model="search" placeholder="Search..."/>
+   </div>
+   </br>
+   
+  <div  ng-controller="user">
+   <div class="row">
+     <div>
+      <table   class=" table table-responsive" >
+
+        <thead>
+          <tr>
+
+            <th >Item</th>
+            <th >Description</th>
+            <th >End Date</th>
+            <th id="center">Winner</th>
+            <th id="center">Starting Price</th>
+            <th id="center">Best Bid</th>
+          </tr>
+        </thead>
+
+        <tbody id="myTable">
+         <tr ng-repeat="data in myData | filter : search" ng-if="data.status == 'closed' "  >
+
+          <td>{{data.Item}}</td>
+          <td>{{data.Description}}</td>
+          <td  ng-init="end_date(data.Start_date,data.Period,$index)">{{data.EndDate}}</td>
+          <td id="center">{{data.Winner}}</td>
+          <td id="center">{{data.Started}}</td>
+          <td id="center">{{data.BestBid}}</td>
+        </tr>
+
+      </tbody>
+
+    </table>
+  </div>
+
+</div>
+</div>
+</div>

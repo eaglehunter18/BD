@@ -1,0 +1,127 @@
+
+<div class="container" ng-controller="formCtrl" >
+
+	<nav class="navbar navbar-default" >
+		<div class="container-fluid ">
+			<ul class="nav navbar-nav ">
+				<li  class="active text-center"><a href="#/new-bid">New Bid</a></li>
+				<li  class="text-center "><a href="#/running-bids-admin">Running Bids</a></li>
+				<li class=" text-center " ><a href="#/closed-bids-admin">Closed Bids</a></li>
+				<li class="text-center" ><a  href="#/history-admin">History</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<h2 id="h2_inline" >Add Bid  &#8352;</h2>
+	<div id="div_inline"  class="col-xs-3 " >
+		<input class="form-control" type="text" value="" ng-model="search" placeholder="Search..."/>
+	</div>
+</br>
+<div class="row" >
+	<!-- panel preview -->
+	<div   class="col-sm-12" >
+		<div class="panel panel-default" >
+			<div class="panel-body form-horizontal bid-form">
+				<div class="form-group">
+					<label for="item" class="col-sm-3 control-label">Item</label>
+					<div class="col-sm-5">
+						<input type="text" class="form-control" id="item" name="item"  ng-model="Item" required>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="description" class="col-sm-3 control-label">Description</label>
+					<div class="col-sm-5">
+						<textarea rows="4" cols="50" class="form-control" id="description" name="description" 
+						ng-model="Description"></textarea>
+					</div>
+				</div> 
+
+				<div class="form-group">
+					<label for="date" class="col-sm-3 control-label">Start Date</label>
+					<div class="col-sm-4">
+						<input type="date" class="form-control" id="date" name="date" ng-model="Start_date">
+					</div>
+					<div class="col-sm-2">
+						<label>
+						<input type="checkbox" class="form-control" value="" id="check" name="date" ng-model="checked" ng-init="checked=true">
+						Start Now
+						</label>
+					</div>
+				</div> 
+
+				<div class="form-group">
+					<label for="amount" class="col-sm-3 control-label">Bidding Period</label>
+					<div class="col-sm-5">
+						<input type="number" class="form-control" id="period" name="period" ng-model="Period">
+					</div>
+				</div> 
+				<div class="form-group">
+					<label for="start" class="col-sm-3 control-label">Starting Price</label>
+					<div class="col-sm-5">
+						<input type="number" class="form-control" id="start" name="start" ng-model="Started">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="increment" class="col-sm-3 control-label">Increment</label>
+					<div class="col-sm-5">
+						<input type="number" class="form-control" id="increment" name="item" ng-model="Increment">
+					</div>
+				</div>               
+				<div class="form-group">
+					<div class="col-sm-12 text-center">
+						<button  type="submit" class="btn btn-success " ng-click="addRow()">
+							<span class="glyphicon glyphicon-plus"></span> Add
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>            
+	</div> <!-- / panel preview -->
+</div><!-- / row preview -->
+
+<div class="row">
+	<div class="col-sm-12">
+		<h4>Bids:</h4>
+	</div>
+	<div class="row" >
+		<div class="col-xs-12" >
+			<div class="table-responsive" >
+				<table class="table preview-table" style ='background-color: #2ba6cb;'>
+					<thead>
+						<tr>
+							<th>Item</th>
+							<th>Description</th>
+							<th>Start Date</th>
+							<th>Period</th>
+							<th>Started</th>
+							<th>Increment</th>
+							<th></th>
+
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="bid in bids">
+							<td>{{bid.Item}}
+							</td>
+							<td>{{bid.Description}}
+							</td>
+							<td>{{bid.Start_date}}
+							</td>
+							<td>{{bid.Period}}
+							</td>
+							<td>{{bid.Started}} $
+							</td>
+							<td>{{bid.Increment}} $
+							</td>
+							<td>
+								<input type="button" value="Start Bid" class="btn btn-success"  ng-disabled="checked" ng-click="startBid(bid.Item)"/>
+							</td>
+						</tr>
+					</tbody> <!-- preview content goes here-->
+				</table>
+			</div>                            
+		</div>
+	</div>
+
+</div>
+</div>

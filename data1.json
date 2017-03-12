@@ -1,0 +1,13 @@
+[
+{"Item":"aaa 1","Description":"jjjjjjjjjjjjjjjjjjjjjjj","Start_date":"Jan 5, 2016 15:37:25","Period":"24","Participant":3,"Started":230,"Current":230,"Increment":20,"status":"opened","deleted":"1","Id":18,"Winner":"Mohammad Ahmad","BestBid":350},
+{"Item":"bbb 2","Description":"kkkkkkkk","Start_date":"Mar 5, 2018 15:37:25","Period":"24","Participant":3,"Started":3500,"Current":5000,"Increment":100,"status":"opened","deleted":"0","Id":4,"Winner":"Alaa Ahmad","BestBid":6000},
+{"Item":"ccc 3","Description":"llllll","Start_date":"Jan 5, 2019 15:37:25","Period":"24","Participant":0,"Started":230,"Current":350,"Increment":20,"status":"opened","deleted":"1","Id":8,"Winner":"Sami Sami","BestBid":450},
+{"Item":"ddd 4","Description":"mmmmmm","Start_date":"Jan 5, 2020 15:37:25","Period":"24","Participant":0,"Started":230,"Current":460,"Increment":30,"status":"opened","deleted":"0","Id":10,"Winner":"Moad Assi","BestBid":900},
+{"Item":"eee 5","Description":"nnnnnn","Start_date":"Mar 9, 2017 11:00:00","Period":"24","Participant":5,"Started":250,"Current":250,"Increment":10,"status":"closed","Winner":"Abed ","BestBid":650},
+{"Item":"fff 6","Description":"oooooo","Start_date":"Jan 5, 2022 15:37:25","Period":"24","Participant":3,"Started":8000,"Current":90000,"Increment":500,"status":"closed","deleted":"1","Winner":"Mohammad Bajis","BestBid":9000},
+{"Item":"ggg 7","Description":"ppppp","Start_date":"Jan 5, 2023 15:37:25","Period":"24","Participant":1,"Started":3600,"Current":3900,"Increment":100,"status":"closed","deleted":"1","Winner":"zayyed ","BestBid":4000},
+{"Item":"hhh 8","Description":"qqqqqq","Start_date":"Jan 5, 2024 15:37:25","Period":"24","Participant":2,"Started":350,"Current":450,"Increment":50,"status":"not started","deleted":"1","Winner":"Yazan ","BestBid":500},
+{"Item":"iii 9","Description":"rrrrrr","Start_date":"Jan 5, 2025 15:37:25","Period":"24","Participant":8,"Started":200,"Current":230,"Increment":30,"status":"not started","deleted":"0","Winner":"Montaser ","BestBid":300}
+]
+
+
